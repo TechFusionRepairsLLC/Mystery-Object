@@ -1,0 +1,103 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f7f7;
+  color: #111;
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.muted {
+  color: #555;
+  margin: 0;
+}
+
+.image-card {
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.main-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.guess-form,
+.admin-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.guess-form input,
+.admin-form input,
+button {
+  font-size: 1rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+button {
+  cursor: pointer;
+  background: #111;
+  color: #fff;
+  border: 0;
+}
+
+button.secondary {
+  background: #fff;
+  color: #111;
+  border: 1px solid #111;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.result-card {
+  width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.feedback {
+  color: #0a5;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .main-image {
+    max-height: 300px;
+  }
+}
